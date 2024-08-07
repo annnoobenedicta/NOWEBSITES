@@ -1,0 +1,260 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #1a73e8;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 4px solid #165abd;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+header nav ul li a:hover {
+    color: #d4e4ff;
+}
+
+.header .cta {
+    background: #165abd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.header .cta:hover {
+    background: #0c4a9a;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero .cta {
+    padding: 15px 30px;
+    background: #ff7043;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.hero .cta:hover {
+    background: #e64a19;
+}
+
+/* Intro Section */
+.intro, .services, .about, .contact {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.intro h2, .services h2, .about h2, .contact h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.intro p, .services p, .about p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Services Section */
+.services .service-item {
+    margin-bottom: 40px;
+}
+
+.services .service-item h3 {
+    font-size: 1.5rem;
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.services .service-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* About Section */
+.about .team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.about .team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.about .team-member h3 {
+    font-size: 1.5rem;
+    color: #1a73e8;
+    margin-bottom: 5px;
+}
+
+.about .team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Contact Section */
+.contact-info {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.contact form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact form button {
+    padding: 15px 30px;
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact form button:hover {
+    background: #165abd;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .container, .hero .container, .intro .container, .services .container, .about .container, .contact .container, footer .container {
+        width: 90%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .about .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .team-member img {
+        margin-bottom: 20px;
+    }
+}
